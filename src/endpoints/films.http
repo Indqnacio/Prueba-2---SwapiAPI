@@ -1,0 +1,29 @@
+### Obtener todas las películas
+GET http://localhost:3000/films
+
+### Obtener película por id
+GET http://localhost:3000/films/6a459ff8cfc06fb972e797f7
+
+### Agregar una nueva película
+POST http://localhost:3000/films
+Content-Type: application/json
+
+{
+    "title": "hola",
+    "director": "adios",
+    "producer": "productor"
+}
+
+### Editar película por Id
+PUT http://localhost:3000/films/6a459ff8cfc06fb972e797f7
+Content-Type: application/json
+
+{
+    "title": "holaaa",
+    "director": "holaaa",
+    "producer": "holaaa"
+}
+
+### Borrar película por Id
+DELETE http://localhost:3000/films/6a459ff8cfc06fb972e797f7
+

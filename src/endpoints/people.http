@@ -1,0 +1,8 @@
+### Obtener todos los personajes
+GET http://localhost:3000/peple 
+
+### Agregar nuevo personaje
+
+### Editar personaje
+
+### Borrar personaje
