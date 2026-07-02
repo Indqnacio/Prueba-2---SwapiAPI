@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { FilmServices } from "../services/film.service.js";
+import { FilmService } from "../services/film.service.js";
 
 export class FilmsController {
 
@@ -8,8 +8,18 @@ export class FilmsController {
             const page = parseInt(req.query.page) || 1;
             const limit = parseInt(req.query.limit) || 10;
 
-            const data = await FilmServices.getAllFilms({ page, limit })
+            const data = await FilmService.getAllFilms({ page, limit });
             return res.status(200).json({ data });
+        } catch (err) {
+            console.error(err);
+            return res.status(500).json({ message: "Internal server error." })
+        }
+    }
+
+    static async getAllFilmsSimple(req, res) {
+        try {
+            const data = await FilmService.getAllFilmsSimple();
+            return res.status(200).json(data);
         } catch (err) {
             console.error(err);
             return res.status(500).json({ message: "Internal server error." })
@@ -20,7 +30,7 @@ export class FilmsController {
         const id = req.params.id;
         if (!mongoose.isValidObjectId(id)) return res.status(400).json({ message: "Invalid ID format." })
         try {
-            const data = await FilmServices.getFilmById(id);
+            const data = await FilmService.getFilmById(id);
             return res.status(200).json(data);
         } catch (err) {
             console.error(err);
@@ -31,7 +41,7 @@ export class FilmsController {
 
     static async createFilm(req, res) {
         try {
-            const data = await FilmServices.createFilm(req.body);
+            const data = await FilmService.createFilm(req.body);
             return res.status(201).json(data);
         } catch (error) {
             console.error(error);
@@ -46,7 +56,7 @@ export class FilmsController {
         const { id } = req.params;
         if (!mongoose.isValidObjectId(id)) return res.status(400).json({ message: "Invalid ID format." })
         try {
-            const data = await FilmServices.editFilmById(id, req.body);
+            const data = await FilmService.editFilmById(id, req.body);
             return res.status(200).json(data);
         } catch (error) {
             console.error(error);
@@ -60,7 +70,7 @@ export class FilmsController {
         const { id } = req.params;
         if (!mongoose.isValidObjectId(id)) return res.status(400).json({ message: "Invalid ID format." })
         try {
-            await FilmServices.deleteFilmById(id);
+            await FilmService.deleteFilmById(id);
             return res.status(200).send({ id: id, message: `Film with ID ${id} successfully deleted` });
         } catch (error) {
             console.error(error);

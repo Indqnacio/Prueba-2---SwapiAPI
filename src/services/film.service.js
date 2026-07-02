@@ -1,19 +1,22 @@
 import { FilmModel } from "../models/film.model.js";
 
-
-export class FilmServices {
+export class FilmService {
     static async getAllFilms({ page, limit }) {
         return await FilmModel.getAllFilms({ page, limit });
     }
 
+    static async getAllFilmsSimple() {
+        return await FilmModel.getAllFilmsSimple();
+    }
+
     static async getFilmById(id) {
-        const exist = await FilmModel.getFilmById(id);
-        if (!exist) {
+        const film = await FilmModel.getFilmById(id);
+        if (!film) {
             const err = new Error("Film not found");
             err.code = "NOT FOUND";
             throw err;
         }
-        return await FilmModel.getFilmById(id);
+        return film;
     }
 
     static async createFilm(filmData) {

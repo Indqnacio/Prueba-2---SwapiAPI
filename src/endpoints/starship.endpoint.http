@@ -1,0 +1,46 @@
+### Obtener todas las naves a detalle
+GET http://localhost:3000/starships
+
+### Obtener todas las naves sin detalle
+GET http://localhost:3000/starships/simple
+
+### Obtener nave por id
+GET http://localhost:3000/starships/6a46ced8eefc6d2386b74bb6
+
+### Agregar una nueva nave
+POST http://localhost:3000/starships
+Content-Type: application/json
+
+{
+    "name": "Death Star 2",
+    "model": "DS-1 Orbital Battle Station",
+    "starship_class": "Deep Space Mobile Battlestation",
+    "length": "120000",
+    "passengers": "843342",
+    "max_atmosphering_speed": "n/a",
+    "hyperdrive_rating": "4.0",
+    "MGLT": "10 MGLT",
+    "cargo_capacity": "1000000000000",
+    "consumables": "3 years"
+}
+
+### Editar nave por Id
+PUT http://localhost:3000/starships/6a46ced8eefc6d2386b74bb6
+Content-Type: application/json
+
+{
+    "name": "Deathhh",
+    "model": "DS-1 Orbital Battle Station",
+    "starship_class": "Deep Space Mobile Battlestation",
+    "length": "120000",
+    "passengers": "843342",
+    "max_atmosphering_speed": "n/a",
+    "hyperdrive_rating": "4.0",
+    "MGLT": "10 MGLT",
+    "cargo_capacity": "1000000000000",
+    "consumables": "3 years"
+}
+
+### Borrar nave por Id
+DELETE http://localhost:3000/starships/6a46ced8eefc6d2386b74bb6
+

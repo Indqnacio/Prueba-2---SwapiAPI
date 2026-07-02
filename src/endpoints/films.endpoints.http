@@ -1,5 +1,8 @@
-### Obtener todas las películas
+### Obtener todas las películas a detalle
 GET http://localhost:3000/films
+
+### Obtener todas las películas sin detalle
+GET http://localhost:3000/films/simple
 
 ### Obtener película por id
 GET http://localhost:3000/films/6a459ff8cfc06fb972e797f7

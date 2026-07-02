@@ -1,0 +1,52 @@
+### Obtener todos los personajes con detalle
+GET http://localhost:3000/people
+
+### Obtener personajes por nombre
+GET http://localhost:3000/people?search=luke
+
+### Obtener un personaje por id
+GET http://localhost:3000/people/6a46e89b34d8c1ce3690629b
+
+### Agregar un nuevo personaje
+POST http://localhost:3000/people
+Content-Type: application/json
+
+{
+    "name": "Christian Lugo 2",
+    "birth_year": "19 BBY",
+    "eye_color": "Brow",
+    "gender": "Male",
+    "hair_color" : "Black",
+    "height": "175",
+    "mass": "85",
+    "skin_color": "Brow",
+    "films": ["6a45a231659736c36c9a948f"],
+    "homeworld": "6a46c0433132f12cf83280fe",
+    "species": ["6a46cbb0d0f8d6f4fe429b34"],
+    "starships": ["6a46d798b0721754038b66b5", "6a46d798b0721754038b66b5"],
+    "vehicles": ["6a46d3ae630eb1e745aead97", "6a46d7f9b5d97d2bebe35f8b"]
+}
+
+### Editar personaje por Id
+PUT http://localhost:3000/people/6a46d86b5116326c37943cc8
+Content-Type: application/json
+
+{
+    "name": "Carlos",
+    "birth_year": "19 BBY",
+    "eye_color": "Brow",
+    "gender": "Male",
+    "hair_color" : "Black",
+    "height": "175",
+    "mass": "85",
+    "skin_color": "Brow",
+    "films": ["6a45a231659736c36c9a948f"],
+    "homeworld": "6a46c0433132f12cf83280fe",
+    "species": ["6a46cbb0d0f8d6f4fe429b34"],
+    "starships": ["6a46d798b0721754038b66b5", "6a46d798b0721754038b66b5"],
+    "vehicles": ["6a46d3ae630eb1e745aead97", "6a46d7f9b5d97d2bebe35f8b"]
+}
+
+### Borrar personaje por Id
+DELETE http://localhost:3000/people/6a46d82e5116326c37943cc7
+

@@ -1,0 +1,44 @@
+### Obtener todos los planetas a detalle
+GET http://localhost:3000/planets
+
+### Obtener todos los planetas sin detalle
+GET http://localhost:3000/planets/simple
+
+### Obtener planeta por id
+GET http://localhost:3000/planets/6a46b7acef9a7fc908651414
+
+### Agregar un nuevo planeta
+POST http://localhost:3000/planets
+Content-Type: application/json
+
+{
+    "name": "Luguito",
+    "diameter": "3000",
+    "rotation_period": "18",
+    "orbital_period": "333",
+    "gravity": "0.85 standard",
+    "population": "30000000",
+    "climate": "temperate",
+    "terrain": "forests, mountains, lakes",
+    "surface_water": "9"
+}
+
+### Editar planeta por Id
+PUT http://localhost:3000/planets/6a46b7acef9a7fc908651414
+Content-Type: application/json
+
+{
+    "name": "Luguit00o",
+    "diameter": "3000",
+    "rotation_period": "18",
+    "orbital_period": "333",
+    "gravity": "0.85 standard",
+    "population": "30000000",
+    "climate": "temperate",
+    "terrain": "forests, mountains, lakes",
+    "surface_water": "9"
+}
+
+### Borrar planeta por Id
+DELETE http://localhost:3000/planets/6a46b7acef9a7fc908651414
+

@@ -1,0 +1,46 @@
+### Obtener todas las especies a detalle
+GET http://localhost:3000/species
+
+### Obtener todas las especies sin detalle
+GET http://localhost:3000/species/simple
+
+### Obtener especie por id
+GET http://localhost:3000/species/6a46cbb0d0f8d6f4fe429b34
+
+### Agregar una nueva especie
+POST http://localhost:3000/species
+Content-Type: application/json
+
+{
+    "name": "Christian",
+    "classification": "mammal",
+    "designation": "sentient",
+    "average_height": "200",
+    "average_lifespan": "420",
+    "eye_colors": "brown",
+    "hair_colors": "black",
+    "skin_colors": "brown",
+    "language": "Galactic Basic",
+    "homeworld": "6a46c0433132f12cf83280fe"
+}
+
+### Editar especie por Id
+PUT http://localhost:3000/species/6a46cbb0d0f8d6f4fe429b34
+Content-Type: application/json
+
+{
+    "name": "Christian",
+    "classification": "mammal",
+    "designation": "sentient",
+    "average_height": "200",
+    "average_lifespan": "420",
+    "eye_colors": "reds",
+    "hair_colors": "black",
+    "skin_colors": "brown",
+    "language": "Galactic Basic",
+    "homeworld": "6a46c0433132f12cf83280fe"
+}
+
+### Borrar especie por Id
+DELETE http://localhost:3000/species/6a46c3877fed5644986f8775
+

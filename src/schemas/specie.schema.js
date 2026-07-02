@@ -13,7 +13,7 @@ const speciesSchema = new mongoose.Schema({
     language: String,
 
     // relaciones 
-    homeworld: String
+    homeworld: { type: mongoose.Schema.Types.ObjectId, ref: 'Planet' }
 }, {
     timestamps: true,
     toJSON: {

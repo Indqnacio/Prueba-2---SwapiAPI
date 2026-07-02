@@ -4,6 +4,7 @@ import { SpeciesController } from "../controllers/specie.controller.js";
 export const SpecieRoute = Router();
 
 SpecieRoute.get("/", SpeciesController.getAllSpecies)
+SpecieRoute.get("/simple", SpeciesController.getAllSpeciesSimple)
 SpecieRoute.get("/:id", SpeciesController.getSpecieById)
 SpecieRoute.post("/", SpeciesController.createSpecie)
 SpecieRoute.put("/:id", SpeciesController.editSpecieById)

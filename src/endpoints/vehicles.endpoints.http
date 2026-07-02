@@ -1,0 +1,42 @@
+### Obtener todos los vehículos con detalle
+GET http://localhost:3000/vehicles
+
+### Obtener todos los vehículos sin detalle
+GET http://localhost:3000/vehicles/simple
+
+### Obtener un vehículo por id
+GET http://localhost:3000/vehicles/6a46ef8cf1e8bb1239b579cd
+
+### Agregar un nuevo vehículo
+POST http://localhost:3000/vehicles
+Content-Type: application/json
+
+{
+    "name": "Sand Crawler 2",
+    "model": "Digger Crawler",
+    "vehicle_class": "wheeled",
+    "length": "36.8",
+    "passengers": "30",
+    "max_atmosphering_speed": "30",
+    "cargo_capacity": "50000",
+    "consumables": "2 months"
+}
+
+### Editar vehículo por Id
+PUT http://localhost:3000/vehicles/6a46d1fceefc6d2386b74bb8
+Content-Type: application/json
+
+{
+    "name": "Sand Crawlererrrrr",
+    "model": "Digger Crawler",
+    "vehicle_class": "wheeled",
+    "length": "36.8",
+    "passengers": "30",
+    "max_atmosphering_speed": "30",
+    "cargo_capacity": "50000",
+    "consumables": "2 months"
+}
+
+### Borrar vehículo por Id
+DELETE http://localhost:3000/vehicles/6a46d1fceefc6d2386b74bb8
+
