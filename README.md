@@ -5,7 +5,7 @@ Además de consumir los recursos de SWAPI, el proyecto incorpora operaciones **C
 
 ---
 
-## 📋 Requisitos
+## Requisitos
 
 Antes de comenzar, asegúrese de contar con:
 
@@ -72,6 +72,6 @@ Con ella podrá ejecutar las peticiones directamente desde VS Code.
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Christian José Lugo Rodríguez**
